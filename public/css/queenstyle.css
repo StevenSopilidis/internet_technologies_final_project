@@ -1,0 +1,63 @@
+body{
+    background-image: url(q1.jpg);
+    background-size: cover;
+    background-position: right;
+}
+h1 {
+    color: #b33939;
+    text-align: center;
+    font-size: 50px;
+
+}
+p {
+    color: red;
+    font-size: 23px;
+    text-align: right;
+    font-family: georgia;
+}
+p::first-letter{
+    color:white;
+    font-size: 80px;
+    padding-right: 8px;
+}
+h3 {
+    color: pink;
+    font-size: 35px;
+}
+.album2 {
+    width: 300px;
+    height: 400px;
+}
+.p1{
+    text-align: left;
+    color: gold;
+    font-family: Palatino;
+    background-color: black;
+    width:130px;
+    height: 60px;
+}
+.p1::first-letter{
+    color:red;
+    font-size: 25px;
+}
+.q2 {
+    border-radius: 70%;
+}
+.epikentro{
+    text-align: center;
+}
+.q4 {
+    border-radius: 40%;
+}
+.p2{
+    text-align: left;
+    color: gold;
+    font-family: Palatino;
+    background-color: black;
+    width:153px;
+    height: 60px;
+}
+.p2::first-letter{
+    color:red;
+    font-size: 25px;
+}
