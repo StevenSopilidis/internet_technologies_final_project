@@ -9,9 +9,9 @@
 <body>
     <div class="dropdown">
         <nav>
-            <a href="index.html"><img class="logo" src="./public/images/logo2.jpg" alt="tpt"></a>
+            <a href="index.php"><img class="logo" src="./public/images/logo2.jpg" alt="tpt"></a>
             <ul>
-                <li><a href="index.html">HOME</a></li>
+                <li><a href="index.php">HOME</a></li>
                 <li><a href="#">MUSIC BANDS</a>
                     <ul>
                         <li><a href="pf.html" target="new">Pink Floyd</a></li>
@@ -54,5 +54,12 @@
             </ul>
         </nav>
     </div>
+
+    <?php
+        include "./Backend/Utils/Dbconnection.php";
+        $conn = new DbConnection();
+
+    ?>
+
 </body>
 </html>
