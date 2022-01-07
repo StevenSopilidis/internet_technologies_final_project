@@ -1,8 +1,9 @@
 <?php
+include "../interfaces/IDbConnection.php";
 
 //class will be used as a singleton so only 1 db connection
 //will be used during program execution
-class DbConnection
+class DbConnection implements IDbConnection
 {
     //wether object of the class is already created
     static bool $is_instantiated = false; 
@@ -24,7 +25,7 @@ class DbConnection
         }
     } 
 
-    function get_connection(): mysqli
+    function getConnection(): mysqli
     {
         if($this->connection == null || $this->connection->error)
         {
@@ -42,5 +43,7 @@ class DbConnection
     }
 }
 
+//singleton instance of DbConnection
+$conn = new DbConnection();
 
 ?>

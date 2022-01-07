@@ -1,0 +1,42 @@
+.disk_rating_form
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.disk_rating_form h2
+{
+    color: #ffffff;
+    font-family: sans-serif;
+}
+
+.disk_rating_form .form_container
+{
+    margin-top: 7px;
+    color: #ffffff;
+    font-family: sans-serif;
+    display: flex;
+    width: 400px;
+    justify-content: space-between;
+}
+
+.disk_rating_form button 
+{
+    background-color: #3fc1c9;
+    color: #ffffff;
+    border: none;
+    width: 160px;
+    height: 40px;
+    border-radius: 12px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.disk_rating_form button:hover
+{
+    background-color: #ffffff;
+    color: #3fc1c9;
+}

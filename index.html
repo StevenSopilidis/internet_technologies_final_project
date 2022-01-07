@@ -5,6 +5,7 @@
 		<title>WORLD OF MUSIC</title>
 		<link rel="shortcut icon" type="image/jpg" href="./public/images/favicon.png">
         <link rel="stylesheet" href="./public/css/style2.css">
+        <link rel="stylesheet" href="./public/css/formstyles.css">
 </head>
 <body>
     <div class="dropdown">
@@ -55,11 +56,36 @@
         </nav>
     </div>
 
-    <?php
-        include "./Backend/Utils/Dbconnection.php";
-        $conn = new DbConnection();
-
-    ?>
+    <!-- content of the form -->
+    <form class="disk_rating_form" id="disk_rating_form">
+        <h2>Submit form for review</h2>
+        <div class="form_container">
+            <label for="disk_selection">Disk: </label>
+            <select id="disk_name_selection" name="disk_selection">
+                <option value="opt1">opt1</option>
+                <option value="opt2">opt2</option>
+                <option value="opt3">opt3</option>
+            </select>
+        </div>
+        <div class="form_container">
+            <label for="date_released">Released On:</label>
+            <input id="dick_released_on" type="date" name="date_released">
+        </div>
+        <div class="form_container">
+            <label for="username">Username:</label>
+            <input id="username" type="text" name="username">
+        </div>
+        <div class="form_container">
+            <label for="user_text">Enter text for review:</label>
+            <textarea id="reviewText" name="user_text"></textarea>
+        </div>
+        <div class="form_container">
+            <label for="rating">Enter rating from 1-5:</label>
+            <input id="review" type="number" max="5" min="1" name="rating">
+        </div>
+        <button type="submit">Submit Review</button>
+    </form>
 
 </body>
+<script src="./public/js/formsubmission.js" async></script>
 </html>
