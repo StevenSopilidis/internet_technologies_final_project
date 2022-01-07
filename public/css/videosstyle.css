@@ -1,0 +1,63 @@
+body{
+    background-color: black;
+}
+.container .box img{
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+    mix-blend-mode: screen;
+    left: 100px;
+    top: 80px;
+}
+.container .box video{
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+    left: 100px;
+    top: 80px;
+
+}
+.containers .boxi img{
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+    mix-blend-mode: overlay;
+    left: 700px;
+    top: 250px;
+}
+.containers .boxi video{
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+    left: 700px;
+    top: 250px;
+
+}
+.containere .boxaki img{
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+    mix-blend-mode: overlay;
+    top: 480px;
+    left: 1300px;
+}
+.containere .boxaki video{
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+    top: 460px;
+    left: 1300px;
+
+}
+h1 {
+    color: gold;
+    text-align: center;
+    text-decoration: underline;
+    font-family: georgia;
+}

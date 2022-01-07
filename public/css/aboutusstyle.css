@@ -1,0 +1,48 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: verdana;
+    background-color: #364f6b;
+}
+table {
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    border-collapse: collapse;
+    width: 800px;
+    height: 200px;
+    boder:1px solid yellow;
+
+}
+tr {
+    transition: all .2s ease-in;
+    curson:pointer;
+    color:white;
+}
+th,td{
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #3fc1c9;
+}
+#header {
+    background-color: Orange;
+    color: white;
+}
+h1{
+    font-weight: 600;
+    text-align: center;
+    background-color: #3fc1c9;
+    color:white;
+    padding:10px 0px;
+}
+tr:hover{
+    background-color: black;
+    transform: scale(1.02);
+
+}
+@media only screen and (max-width:768px){
+    table {
+        width:90%;
+    }
+}

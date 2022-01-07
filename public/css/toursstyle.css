@@ -1,0 +1,36 @@
+*{
+    background-color: black;
+    padding: 0;
+    margin: 0;
+}
+.pf{
+    color:pink;
+    text-align: center;
+    margin-top: 10px;
+}
+.mapimg img {
+    position: absolute;
+    left:630px;
+    right:600px;
+}
+.queen{
+    color:red;
+    text-align: center;
+    margin-top: 400px;
+}
+.queenmap img {
+    position: absolute;
+    left:745px;
+    right:600px;
+
+}
+.metallica {
+    color:gold;
+    text-align: center;
+    margin-top: 400px;
+}
+.metamap img{
+    position: absolute;
+    left:550px;
+    right:600px;
+}
