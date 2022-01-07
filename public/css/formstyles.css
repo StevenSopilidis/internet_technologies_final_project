@@ -1,4 +1,4 @@
-.disk_rating_form
+.my_form
 {
     width: 100%;
     display: flex;
@@ -7,13 +7,13 @@
     margin-top: 20px;
 }
 
-.disk_rating_form h2
+.my_form h2
 {
     color: #ffffff;
     font-family: sans-serif;
 }
 
-.disk_rating_form .form_container
+.my_form .form_container
 {
     margin-top: 7px;
     color: #ffffff;
@@ -23,7 +23,7 @@
     justify-content: space-between;
 }
 
-.disk_rating_form button 
+.my_form button 
 {
     background-color: #3fc1c9;
     color: #ffffff;
@@ -35,7 +35,7 @@
     cursor: pointer;
 }
 
-.disk_rating_form button:hover
+.my_form button:hover
 {
     background-color: #ffffff;
     color: #3fc1c9;

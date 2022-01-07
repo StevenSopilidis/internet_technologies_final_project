@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-		<meta charset="utf-8">
-		<title>WORLD OF MUSIC</title>
-		<link rel="shortcut icon" type="image/jpg" href="./public/images/favicon.png">
-        <link rel="stylesheet" href="./public/css/style2.css">
-        <link rel="stylesheet" href="./public/css/formstyles.css">
+    <meta charset="UTF-8">
+    <title>Contest</title>
+	<link rel="shortcut icon" type="image/jpg" href="./public/images/favicon.png">
+    <link rel="stylesheet" href="./public/css/style2.css">
+    <link rel="stylesheet" href="./public/css/formstyles.css">
 </head>
 <body>
     <div class="dropdown">
@@ -56,36 +56,24 @@
         </nav>
     </div>
 
-    <!-- content of the form -->
-    <form class="my_form" id="my_form">
-        <h2>Submit form for review</h2>
-        <div class="form_container">
-            <label for="disk_selection">Disk: </label>
-            <select id="disk_name_selection" name="disk_selection">
-                <option value="opt1">opt1</option>
-                <option value="opt2">opt2</option>
-                <option value="opt3">opt3</option>
-            </select>
-        </div>
-        <div class="form_container">
-            <label for="date_released">Released On:</label>
-            <input id="dick_released_on" type="date" name="date_released">
-        </div>
-        <div class="form_container">
-            <label for="username">Username:</label>
-            <input id="username" type="text" name="username">
-        </div>
-        <div class="form_container">
-            <label for="user_text">Enter text for review:</label>
-            <textarea id="reviewText" name="user_text"></textarea>
-        </div>
-        <div class="form_container">
-            <label for="rating">Enter rating from 1-5:</label>
-            <input id="review" type="number" max="5" min="1" name="rating">
-        </div>
-        <button type="submit">Submit Review</button>
-    </form>
+    <?php
 
+use function PHPSTORM_META\type;
+
+if(!array_key_exists("winner1", $_GET) || !array_key_exists("winner2", $_GET) || !array_key_exists("born2003", $_GET))
+        {
+            header("Location: http://localhost/first_semester_project");
+        }
+        echo "<h3 style='color: #ffffff; font-family: sans-serif;'>Winner1: $_GET[winner1]</h3>";
+        echo "<h3 style='color: #ffffff; font-family: sans-serif;'>Winner2: $_GET[winner2]</h3>";
+        $born2003 = explode(",", $_GET["born2003"]);
+        echo "<br>";
+        echo "<h3 style='color: #ffffff; font-family: sans-serif;'>Contestants born in 2003: </h3>";
+        for ($i=0; $i < count($born2003); $i++) { 
+            $count = $i + 1;
+            echo "<p style='color: #ffffff; font-family: sans-serif;'>$count) $born2003[$i]</p>";
+        }
+        
+    ?>
 </body>
-<script src="./public/js/formsubmission.js" async></script>
 </html>

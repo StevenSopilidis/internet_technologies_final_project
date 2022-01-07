@@ -1,4 +1,4 @@
-const submissionform = document.getElementById("disk_rating_form");
+const submissionform = document.getElementById("my_form");
 
 submissionform.addEventListener("submit", async (e) => {
     e.preventDefault();

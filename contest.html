@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-		<meta charset="utf-8">
-		<title>WORLD OF MUSIC</title>
-		<link rel="shortcut icon" type="image/jpg" href="./public/images/favicon.png">
-        <link rel="stylesheet" href="./public/css/style2.css">
-        <link rel="stylesheet" href="./public/css/formstyles.css">
+    <meta charset="UTF-8">
+    <title>Contest</title>
+	<link rel="shortcut icon" type="image/jpg" href="./public/images/favicon.png">
+    <link rel="stylesheet" href="./public/css/style2.css">
+    <link rel="stylesheet" href="./public/css/formstyles.css">
 </head>
 <body>
     <div class="dropdown">
@@ -56,36 +56,19 @@
         </nav>
     </div>
 
-    <!-- content of the form -->
-    <form class="my_form" id="my_form">
-        <h2>Submit form for review</h2>
+
+    <form id="my_form" class="my_form">
+        <h2>Complete word music contest</h2>
         <div class="form_container">
-            <label for="disk_selection">Disk: </label>
-            <select id="disk_name_selection" name="disk_selection">
-                <option value="opt1">opt1</option>
-                <option value="opt2">opt2</option>
-                <option value="opt3">opt3</option>
-            </select>
+            <label id="number_of_contestants_label" for="number_of_contestants">Enter number of contestants: </label>
+            <input id="number_of_contestants" type="number" name="number_of_contestants" min="1">
         </div>
-        <div class="form_container">
-            <label for="date_released">Released On:</label>
-            <input id="dick_released_on" type="date" name="date_released">
-        </div>
-        <div class="form_container">
-            <label for="username">Username:</label>
-            <input id="username" type="text" name="username">
-        </div>
-        <div class="form_container">
-            <label for="user_text">Enter text for review:</label>
-            <textarea id="reviewText" name="user_text"></textarea>
-        </div>
-        <div class="form_container">
-            <label for="rating">Enter rating from 1-5:</label>
-            <input id="review" type="number" max="5" min="1" name="rating">
-        </div>
-        <button type="submit">Submit Review</button>
+        <table id="table_of_contestants">
+            
+        </table>
+        <button id="enter_contenstants_button" type="submit">Enter</button>
     </form>
 
 </body>
-<script src="./public/js/formsubmission.js" async></script>
+<script src="./public/js/contest.js"></script>
 </html>
