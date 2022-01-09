@@ -57,13 +57,15 @@
     </div>
 
     <?php
-
-use function PHPSTORM_META\type;
-
-if(!array_key_exists("winner1", $_GET) || !array_key_exists("winner2", $_GET) || !array_key_exists("born2003", $_GET))
-        {
-            header("Location: http://localhost/first_semester_project");
-        }
+    if(!array_key_exists("winner1", $_GET) || !array_key_exists("winner2", $_GET) || !array_key_exists("born2003", $_GET))
+    {
+        //relocate user to index_page parameters where not set
+        $request_uri = explode("/", $_SERVER["REQUEST_URI"]);
+        $request_uri[2] = "";
+        $relocation_url = implode("/", $request_uri);
+        header("Location: $relocation_url");
+        exit();
+    }else {
         echo "<h3 style='color: #ffffff; font-family: sans-serif;'>Winner1: $_GET[winner1]</h3>";
         echo "<h3 style='color: #ffffff; font-family: sans-serif;'>Winner2: $_GET[winner2]</h3>";
         $born2003 = explode(",", $_GET["born2003"]);
@@ -73,6 +75,7 @@ if(!array_key_exists("winner1", $_GET) || !array_key_exists("winner2", $_GET) ||
             $count = $i + 1;
             echo "<p style='color: #ffffff; font-family: sans-serif;'>$count) $born2003[$i]</p>";
         }
+    }
         
     ?>
 </body>

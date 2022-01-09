@@ -9,30 +9,36 @@ form.addEventListener("submit", async (e) => {
     {
         const numberOfContestantants = document.getElementById("number_of_contestants").value;
         
-        //insert the rows to the table of contestants
-        let table = document.getElementById("table_of_contestants");
-        var insertedHtml =  
-        `<tr>
-        <th style="color: #ffffff; font-family: sans-serif">Username</th>
-        <th style="color: #ffffff; font-family: sans-serif">BirthDate</th>
-        </tr>`;
-        for (let i = 0; i < numberOfContestantants; i++) {
-            insertedHtml += `<tr>
-            <th>
-                <input class="contentents_usernames" type="text" name="username" required>
-            </th>
-            <th>
-                <input class="contentents_birthdates" type="number" name="birthdate" required>
-            </th>
+        if(numberOfContestantants > 0)
+        {
+            //insert the rows to the table of contestants
+            let table = document.getElementById("table_of_contestants");
+            var insertedHtml =  
+            `<tr>
+            <th style="color: #ffffff; font-family: sans-serif">Username</th>
+            <th style="color: #ffffff; font-family: sans-serif">BirthDate</th>
             </tr>`;
-        }
-        document.getElementById("number_of_contestants").style.display = "none";
-        document.getElementById("number_of_contestants_label").style.display = "none";    
-        table.innerHTML = insertedHtml;
-        document.getElementById("enter_contenstants_button").style.display = "none";    
-        table.innerHTML += "<button id='enter_contestants_data_button' type='submit'>Enter Data</button>"
+            for (let i = 0; i < numberOfContestantants; i++) {
+                insertedHtml += `<tr>
+                <th>
+                    <input class="contentents_usernames" type="text" name="username" required>
+                </th>
+                <th>
+                    <input class="contentents_birthdates" type="number" name="birthdate" required>
+                </th>
+                </tr>`;
+            }
+            document.getElementById("number_of_contestants").style.display = "none";
+            document.getElementById("number_of_contestants_label").style.display = "none";    
+            table.innerHTML = insertedHtml;
+            document.getElementById("enter_contenstants_button").style.display = "none";    
+            table.innerHTML += "<button id='enter_contestants_data_button' type='submit'>Enter Data</button>"
 
-        inserted = true;
+            inserted = true;
+        }else {
+            alert("Number of contestants cannot be 0");
+        }
+        
     }else {
         //get data of contestants
         const data = [];
@@ -55,7 +61,9 @@ form.addEventListener("submit", async (e) => {
                 born2003.push(contestant.username);
             }
         });
-        window.location.href = `http://localhost/first_semester_project/contest_winners.php?winner1=${data[winner1].username}&winner2=${data[winner2].username}&born2003=${born2003}`;
+        const relocationUrl = window.location.href.split("/");
+        relocationUrl[relocationUrl.length - 1] = `contest_winners.php?winner1=${data[winner1].username}&winner2=${data[winner2].username}&born2003=${born2003}`;
+        window.location.href = relocationUrl.join("/");
     }
 });
 

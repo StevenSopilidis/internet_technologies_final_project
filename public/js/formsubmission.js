@@ -1,5 +1,6 @@
 const submissionform = document.getElementById("my_form");
 
+
 submissionform.addEventListener("submit", async (e) => {
     e.preventDefault();
     //get the form data
@@ -13,7 +14,9 @@ submissionform.addEventListener("submit", async (e) => {
 
     //make api request o backend endpoint
     try {   
-        const response = await fetch("http://localhost/first_semester_project/backend/api/review.php", {
+        const request_url = window.location.href.split("/");
+        request_url[request_url.length - 1] = "backend/api/review.php";
+        const response = await fetch(request_url.join("/"), {
             method: "POST",
             body: JSON.stringify(requestData),
         });
